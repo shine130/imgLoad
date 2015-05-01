@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>shine imgLoad</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="header"> <a href="http://blog.ipsfan.com/1523.html" target="_blank" class="link">查看文档</a><p class="copyright">copyright(c) 2014 ipsfan.com. All rights reserved.</p></div>
+
+<div class="wp">
+	<div id="info">图片加载中……</div>
+	<img class="imgLoad" width="940" height="350" src="1.jpg" alt="">
+	<img class="imgLoad" width="940" height="350" src="2.jpg" alt="">
+	<img class="imgLoad" width="940" height="350" src="1.jpg" alt="">
+	<img class="imgLoad" width="940" height="350" src="1.jpg" alt="">
+	<div class="bg imgLoad"></div>
+	<div class="bg2 imgLoad"></div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/imgLoad.js"></script>
+<script>
+	$(function(){
+		$('img').hide();
+		$('div.imgLoad').hide();
+
+		$('body').imgLoad({
+			callBack:function(){
+				$('#info').html('图片加载完成');
+				$('img').show();
+				$('div').show();
+			}
+		});
+
+
+	});
+</script>
+</body>
+</html>

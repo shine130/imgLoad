@@ -1,5 +1,7 @@
 等待图片资源加载完成后执行函数的jQuery插件
 
+http://blog.ipsfan.com/1523.html
+
 使用方法：
 
 

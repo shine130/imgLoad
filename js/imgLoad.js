@@ -21,11 +21,11 @@
 				var imgSrc=$(this).attr('src');
 				imgSrcs.push(imgSrc);
 			}else{
-				var imgSrc=($(this).css('backgroundImage')).slice(5,-2);
+				var urlStr=$(this).css('backgroundImage');
+				var imgSrc=(urlStr.replace(/\"/g,'')).slice(4,-1);
 				imgSrcs.push(imgSrc);
 			};
 		});
-		
 		$.each(imgSrcs,function(i,e){
 			var imgDom=$('<img>');
 			imgDom.attr('src',e);
